@@ -1,0 +1,11 @@
+[Unit]
+Description=Minecraft Server startup service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/java -Xmx1024M -Xms1024M -jar /var/minecraft/minecraft_server.jar.jar nogui
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target  
